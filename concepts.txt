@@ -1,0 +1,9 @@
+Object 'Player'
+
+	Player 'Player1'
+		name = name
+		score = score
+
+	Player 'Player2'
+		name = name
+		score = score
