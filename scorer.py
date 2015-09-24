@@ -10,8 +10,14 @@ and the scorer calculate their score and eventually determine a winner.
 '''
 
 class Player(object):
+	'''
+	Contains all of the data for each player
+	and the functions for calculating scores.
+	'''
+
 	def __init__(self, name):
 		self.name = name
 		self.score = 501
+		self.throws = []
 
-
+	def throw(throw1, throw2, throw3):
