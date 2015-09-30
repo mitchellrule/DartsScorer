@@ -61,6 +61,24 @@ def scoreConvert(throws):
 	return convertedThrows
 	print(convertedThrows)
 
+def isValidThrow(throws):
+	'''
+	Takes throws and returns True or False to
+	whether they are legal throws. 
+
+	Example: ['T21', '20', '20'] --> False
+	'''
+	valid = True
+
+	for throw in throws:
+		if re.match(r'[dt][1-20]', throw.lower()) or re.match(r'[1-20]', throw.lower()):
+			pass
+		else:
+			valid = False
+			break
+
+	# print(valid)
+	return valid
 
 #Test
-scoreConvert(['T20', 'D20', '15'])
+isValidThrow(['T20', 'D20', '15'])
