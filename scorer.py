@@ -28,10 +28,12 @@ class Player(object):
 
 def scoreConvert(throws):
 	'''
-	Takes inputs as a list of three throws.
+	Takes inputs as a list of three string throws.
 	Applies triple and double multipliers.
+
+	Returns throws as list of integers
 	
-	Example: 'T20' --> 60
+	Example: ['T20', 'D20', '15'] --> [60, 40, 15]
 	'''
 	convertedThrows = []
 
