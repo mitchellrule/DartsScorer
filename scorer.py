@@ -24,12 +24,12 @@ class Player(object):
 		self.throwlist = []
 
 	# TODO Allow final throw to be a double to finish game.
-	def throw(throws):
-		if isValidThrow(throws):
-			for throw in scoreConvert(throws):
-				if self.score - throw > 1
-					self.score = self.score - throw
-					self.throwlist.append(throw)
+	# def throw(throws):
+	# 	if isValidThrow(throws):
+	# 		for throw in scoreConvert(throws):
+	# 			if self.score - throw > 1
+	# 				self.score = self.score - throw
+	# 				self.throwlist.append(throw)
 
 
 def scoreConvert(throws):
