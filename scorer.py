@@ -12,6 +12,7 @@ import re
 
 
 class Player(object):
+
 	'''
 	Contains all of the data for each player
 	and the functions for calculating scores.
@@ -20,13 +21,19 @@ class Player(object):
 	def __init__(self, name):
 		self.name = name
 		self.score = 501
-		self.throws = []
+		self.throwlist = []
 
+	# TODO Allow final throw to be a double to finish game.
 	def throw(throws):
-		pass
+		if isValidThrow(throws):
+			for throw in scoreConvert(throws):
+				if self.score - throw > 1
+					self.score = self.score - throw
+					self.throwlist.append(throw)
 
 
 def scoreConvert(throws):
+
 	'''
 	Takes inputs as a list of three string throws.
 	Applies triple and double multipliers.
@@ -35,8 +42,10 @@ def scoreConvert(throws):
 	
 	Example: ['T20', 'D20', '15'] --> [60, 40, 15]
 	'''
+
 	convertedThrows = []
 
+	# TODO Add bullseye
 	for throw in throws:
 		if 'd' in throw.lower():
 			# Strips character from the start of string to get number only
@@ -59,15 +68,17 @@ def scoreConvert(throws):
 			convertedThrows.append(throw)
 
 	return convertedThrows
-	print(convertedThrows)
+	# print(convertedThrows)
 
 def isValidThrow(throws):
+
 	'''
 	Takes throws and returns True or False to
 	whether they are legal throws. 
 
 	Example: ['T21', '20', '20'] --> False
 	'''
+
 	valid = True
 
 	for throw in throws:
@@ -79,6 +90,3 @@ def isValidThrow(throws):
 
 	# print(valid)
 	return valid
-
-#Test
-isValidThrow(['T20', 'D20', '15'])
