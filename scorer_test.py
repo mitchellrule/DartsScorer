@@ -1,4 +1,5 @@
-import scorer
+from scorer import *
 
-def test_answer():
+def test_Validator():
     assert isValidThrow(['20', '20', '20']) == True
+    
