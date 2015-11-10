@@ -68,7 +68,6 @@ def scoreConvert(throws):
 			convertedThrows.append(throw)
 
 	return convertedThrows
-	# print(convertedThrows)
 
 def isValidThrow(throws):
 
@@ -82,11 +81,10 @@ def isValidThrow(throws):
 	valid = True
 
 	for throw in throws:
-		if re.match(r'[dt][1-20]', throw.lower()) or re.match(r'[1-20]', throw.lower()):
+		if re.match(r'^[dt][1-20]'|r'^[1-20]', throw.lower()) or (throw.lower() == 'b') or (throw.lower() == 'db'):
 			pass
 		else:
 			valid = False
 			break
 
-	# print(valid)
 	return valid
